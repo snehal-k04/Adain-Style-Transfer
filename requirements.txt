@@ -1,4 +1,4 @@
 Flask
 Flask-WTF
-flask_bootstrap
+Flask-Bootstrap
 
