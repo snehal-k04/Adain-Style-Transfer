@@ -1,7 +1,7 @@
-content_dir:C:\Users\91917\Downloads\test2017
-style_dir:C:\Users\91917\Downloads\train_1
-vgg:C:/Users/91917/OneDrive/Desktop/NST/vgg_normalised.pth
-experiment:training
+content_dir:/kaggle/input/datasets/snehal26042004/content-images-dataset/test2017
+style_dir:/kaggle/input/datasets/snehal26042004/style-images-dataset/train_1
+vgg:/kaggle/input/datasets/snehal26042004/nst-adain-code/NST/vgg_normalised.pth
+experiment:Training
 crop_size:True
 final_size:512
 content_size:512
@@ -10,10 +10,12 @@ lr:0.0001
 lr_decay:5e-05
 content_wt:1.0
 style_wt:10
-batch_size:18
-epochs:60
-log_interval:5
-save_interval:5
-resume:False
-decoder_path:None
-optimizer_path:None
+batch_size:8
+epochs:50
+log_interval:1
+save_interval:2
+resume:True
+decoder_path:/kaggle/input/datasets/snehal26042004/optimizer-and-decoder/decoder 14.pth
+optimizer_path:/kaggle/input/datasets/snehal26042004/optimizer-and-decoder/optimizer 14.pth
+
+

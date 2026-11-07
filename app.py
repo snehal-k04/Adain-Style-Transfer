@@ -1,10 +1,8 @@
-from sys import exception
-
-from flask import Flask ,render_template, send_from_directory,url_for
+from flask import Flask ,render_template, send_from_directory
 from flask_wtf import FlaskForm 
 import os
 
-from networkx import dag_longest_path
+
 from utils.model import VGGEncoder,Decoder,adaptive_IN
 from werkzeug.utils import secure_filename
 from flask_wtf.file import FileAllowed,FileRequired,FileField
@@ -37,7 +35,7 @@ encoder=VGGEncoder('vgg_normalised.pth')
 decoder=Decoder()
 encoder.to(device)
 decoder.to(device)
-decoder.load_state_dict(torch.load('C:/Users/91917/OneDrive/Desktop/AI_ML lec content/Major Projects/NST/experiment/training/decoder 14.pth',map_location=device))
+decoder.load_state_dict(torch.load('C:/Users/91917/OneDrive/Desktop/AI_ML lec content/Major Projects/NST/Adain-Style-Transfer/experiment/training/decoder 4 (1).pth',map_location=device))
 
 encoder.eval()
 decoder.eval()

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdaIN-Style Transfer Editing</title>
+    <title>AdaIN-Style Transfer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link
@@ -639,7 +639,7 @@
 
     <div class="header-section">
         <div class="container">
-            <h1 class="display-4 fw-bold">STYLE FORGE AI</h1>
+            <h1 class="display-4 fw-bold">STYLE DEMIURGE AI</h1>
             <p class="lead"
                 style="border-right: 2px solid rgba(255,255,255,0.75); white-space: nowrap; overflow: hidden; width: 0; animation: typing 3.5s steps(40, end) forwards, blink-caret .75s step-end infinite; margin: 0 auto; display: inline-block; text-align: left;">
                 A firm handshake with a phantom limb of fine art. </p>
@@ -746,8 +746,8 @@
                             <div class="example-inputs">
                                 <div>
                                     <div class="example-role text-center">Content Image</div>
-                                    <img src="{{ url_for('send_example', filename='i_p image.jpg') }}"
-                                        alt="Brad Pitt Content" class="example-image">
+                                    <img src="{{ url_for('send_example', filename='i_p image.jpeg') }}"
+                                        alt="hrithik roshan Content" class="example-image">
                                 </div>
                                 <div>
                                     <div class="example-role text-center">Style Image</div>
@@ -758,8 +758,8 @@
                             <div class="example-arrow">-&gt;</div>
                             <div class="example-output">
                                 <div class="example-role text-center">Output</div>
-                                <img src="{{ url_for('send_example', filename='o_p style 1.jpg') }}"
-                                    alt="Brad Pitt Sketch Result" class="example-image">
+                                <img src="{{ url_for('send_example', filename='o_p style 1.png') }}"
+                                    alt="hrithik roshan Sketch Result" class="example-image">
                             </div>
                         </div>
                     </div>
@@ -768,8 +768,8 @@
                             <div class="example-inputs">
                                 <div>
                                     <div class="example-role text-center">Content Image</div>
-                                    <img src="{{ url_for('send_example', filename='i_p image.jpg') }}"
-                                        alt="Brad Pitt Content" class="example-image">
+                                    <img src="{{ url_for('send_example', filename='i_p image.jpeg') }}"
+                                        alt="hrithik roshan Content" class="example-image">
                                 </div>
                                 <div>
                                     <div class="example-role text-center">Style Image</div>
@@ -780,8 +780,8 @@
                             <div class="example-arrow">-&gt;</div>
                             <div class="example-output">
                                 <div class="example-role text-center">Output</div>
-                                <img src="{{ url_for('send_example', filename='o_p style 2.jpg') }}"
-                                    alt="Brad Pitt Picasso Result" class="example-image">
+                                <img src="{{ url_for('send_example', filename='o_p style 2.png') }}"
+                                    alt="hrithik roshan Picasso Result" class="example-image">
                             </div>
                         </div>
                     </div>
@@ -890,8 +890,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5>Contact Us</h5>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Innovation Dr, Tech City</p>
-                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> hello@synapseArt.ai</p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Innovation, Tech City</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> hello@synapseart.ai</p>
                     <p class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -935,7 +935,17 @@
                 reader.readAsDataURL(file);
             }
         }
+        const form = document.querySelector('form');
+        const loader = document.getElementById('loader');
 
+        form.addEventListener('submit', function () {
+            loader.classList.add('active');
+        });
+
+        // hides the overlay if the user presses the browser Back button
+        window.addEventListener('pageshow', function () {
+            loader.classList.remove('active');
+        });
         // Restore previews if page reloads with data (optional enhancement)
         window.onload = function () {
             if (document.getElementById('resultSection')) {
