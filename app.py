@@ -15,7 +15,7 @@ import torch
 from torchvision import transforms
 
 app=Flask(__name__)
-app.config['SECRET_KEY']='secret_key'
+app.config['SECRET_KEY']=os.environ.get('SECRET_KEY','adain-nst-key')
 app.config['UPLOAD_FOLDER']='static/uploads'
 Bootstrap(app)
 
