@@ -1,7 +1,7 @@
 from flask import Flask ,render_template, send_from_directory
 from flask_wtf import FlaskForm 
 import os
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 from utils.model import VGGEncoder,Decoder,adaptive_IN
 from werkzeug.utils import secure_filename
@@ -31,12 +31,13 @@ class Form(FlaskForm):
 
 device=torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-encoder=VGGEncoder('vgg_normalised.pth')
+encoder=VGGEncoder(os.path.join(BASE_DIR, 'vgg_normalised.pth'))
 decoder=Decoder()
 encoder.to(device)
 decoder.to(device)
-decoder.load_state_dict(torch.load('C:/Users/91917/OneDrive/Desktop/AI_ML lec content/Major Projects/NST/Adain-Style-Transfer/experiment/training/decoder 4 (1).pth',map_location=device))
-
+decoder.load_state_dict(torch.load(
+    os.path.join(BASE_DIR, "experiment", "training", "decoder 4 (1).pth"),
+    map_location=device))
 encoder.eval()
 decoder.eval()
 
