@@ -36,7 +36,7 @@ decoder=Decoder()
 encoder.to(device)
 decoder.to(device)
 decoder.load_state_dict(torch.load(
-    os.path.join(BASE_DIR, "experiment", "training", "decoder 4 (1).pth"),
+    os.path.join(BASE_DIR, "experiment", "training", "decoder 320.pth"),
     map_location=device))
 encoder.eval()
 decoder.eval()

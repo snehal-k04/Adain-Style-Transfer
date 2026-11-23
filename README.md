@@ -63,10 +63,7 @@ Deployed on Render with Gunicorn:
 
 - Build command: `pip install -r requirements.txt`
 - Start command: `gunicorn app:app --workers 1 --timeout 120`
-- Environment variables: `PYTHON_VERSION=3.10.13`, `SECRET_KEY=<random value>`
-
-## Example results
-<https://github.com/snehal-k04/Adain-Style-Transfer/blob/main/examples/i_p%20image.jpeg>
+- Environment variables: `PYTHON_VERSION=3.10.13`, `SECRET_KEY=<--------->`
 
 ## Reference
 
