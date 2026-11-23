@@ -66,9 +66,7 @@ Deployed on Render with Gunicorn:
 - Environment variables: `PYTHON_VERSION=3.10.13`, `SECRET_KEY=<random value>`
 
 ## Example results
-
-<!-- Add 2 or 3 images from your examples folder, for example: -->
-<!-- ![Result](examples/result1.png) -->
+<https://github.com/snehal-k04/Adain-Style-Transfer/blob/main/examples/i_p%20image.jpeg>
 
 ## Reference
 
