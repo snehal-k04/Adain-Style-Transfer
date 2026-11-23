@@ -2,7 +2,7 @@
 
 Apply the artistic style of any painting or sketch to any photo. This project implements **Adaptive Instance Normalization (AdaIN)** in PyTorch and serves it through a Flask web app.
 
-**Live demo:** adain-style-transfer-62nb.onrender.com
+**Live demo:** <adain-style-transfer-62nb.onrender.com>
 
 > The demo runs on a free Render instance. It sleeps when idle, so the first visit can take a minute to wake up, and each stylization takes a while on the free CPU.
 
